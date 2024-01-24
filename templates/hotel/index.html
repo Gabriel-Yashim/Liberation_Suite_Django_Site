@@ -138,7 +138,7 @@
                 </div>
                 <div class="row justify-content-center">
                     {% for item in room %}
-                    <div class="col-md-5 col-8 my-3 mx-3">
+                    <div class="col-md-5 col-10 my-3 mx-3">
                         <div class="card p-2 shadow-lg">
                             <div class="carousel slide" id="carouselExample{{ item.carousel_number }}" data-bs-ride="carousel">
                                 <div class="carousel-inner" style="height: 300px;">
@@ -226,7 +226,7 @@
                 <h2 class="fw-bolde headline_part">Our Amazing <strong class="span-color">Facilities</strong></h2>
                 <p class="m-0 mx-auto w-50">At Liberation Suite, we are dedicated to providing a unique and unforgettable experience for our guests. Our range of services is designed to ensure comfort, convenience, and an unparalleled stay. Explore the exceptional services we offer:</p>
             </div>
-            <div class="row text-dark justify-content-evenly">
+            <div class="row text-dark justify-content-center">
                 {% for item in servicesection %}
                 <div class="col-md-3 col-8 my-3">
                     <div class="card py-3 shadow-lg" style="border-radius: 10px; height: 300px; overflow: hidden;">
@@ -395,7 +395,7 @@
         </section>
 
         <!-- about page second section starts here  -->
-        <section class="about-two py-5">
+        <!-- <section class="about-two py-5">
             <div class="container">
                 <div class="intro mb-5 text-center">
                     <h2 class="fw-bolder headline_part">Our <strong class="span-color">Management Team</strong></h2>
@@ -406,7 +406,7 @@
                     <div class="col-md-4 col-8 mx-auto p-4">
                         <div class="card">
                             <div class="img-holder rounded-0 shadow-0 w-100 d-block">
-                                <img src="{{ item.image.url }}" class="card-img-top" alt="liberation-suite-hotel-about">
+                                <img src="{{ item.image }}" class="card-img-top" alt="liberation-suite-hotel-about">
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -424,7 +424,7 @@
                     {% endfor %}
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- about page second section stops here  -->
         
         <section class="fullwidth_block padding-top-75 padding-bottom-75" data-background-color="#ffffff">

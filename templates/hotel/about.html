@@ -26,40 +26,40 @@
  <!-- Body section starts here  -->
  <!-- about page section one starts here  -->
     <div id="more"></div>
-    <section class="about-one py-5">
+    <section class="about-one py-5 my-3">
         <div class="container">
             <div class="col-md-12 pt-3 col-8 mx-auto text-center">
                 <h2 class="fw-bolder headline_part"><strong class="span-color">15+ Years</strong> of Experience</h2>
-                <p>With over a decade of expertise, we pride ourselves on curating experiences that transcend the ordinary.</p>
+                <p>With over a decade of expertise, we pride ourselves on curating experiences that transcend the ordinary. <span class="span-color fw-bolder">Liberation Suite</span> is a registerd business with The Corporate Affairs Commission (CAC) of Nigeria as <a href="https://drive.google.com/file/d/1HVRTeQLXDkQhxGAwCNlApErH04DT19MC/view?usp=sharing" target="_blank" style="text-decoration: none;"><span class="span-color fw-bolder">LIBERATION CHOICE RESIDENCES AND APARTMENTS LIMITED (RC - 7203934)</span></a></p>
             </div>
-            <div class="row py-5 justify-content-evenly ">
+            <div class="row py-5 justify-content-center mt-5">
                 <div class="col-md-5 col-10 mt-5 mx-auto">
                     <h3 class="fs-2 fw-bolder "><span class="span-color">Recreating Home</span> Away From Home</h3>
                     <p class="lh-lg">Liberation Suite, driven by a commitment to redefine comfort, weaves heartfelt stories like that of the Smith family, transforming their stay into a home away from home. From the warm welcome in the lobby to thoughtfully designed spaces, every detail reflects a dedication to creating an environment of genuine hospitality. Liberation Suite's approach transcends mere luxury, embracing a philosophy that anticipates and fulfills guests' needs. Through personalized touches and an unwavering commitment to service, Liberation Suite ensures that guests, like the Smiths, leave not just with memories but with a profound sense of having discovered a second home—a place where comfort is redefined, and every guest becomes a cherished part of the Liberation family.</p>
                 </div>
-                <div class="col-md-6 col-10 mx-auto">
+                <div class="col-md-6 col-10 mx-auto align-self-center">
                     <div class="img-holder overflow-hidden rounded-5">
                         <img src="{% static 'images/Liberation-Suite-Hotel-fv2.jpg' %}" class="img d-block mx-auto img-fluid" alt="liberation-suite-hotel-about">
                     </div>
                 </div>
             </div>
-            <div class="row py-5 justify-content-evenly ">
-                <div class="col-md-6 col-10 mx-auto">
+            <div class="row py-5 justify-content-center">
+                <div class="col-md-6 col-10 mx-auto align-self-center">
                     <div class="img-holder overflow-hidden rounded-5">
                         <img src="{% static 'images/Liberation-Suite-Hotel-rv1.jpg' %}" class="img d-block mx-auto img-fluid" alt="liberation-suite-hotel-about">
                     </div>
                 </div>
-                <div class="col-md-5 col-10 mt-5 mx-auto">
+                <div class="col-md-5 col-10 mt-2 mx-auto">
                     <h3 class="fs-2 fw-bolder "><span class="span-color">Hospitality</span> At Its Pick</h3>
                     <p class="lh-lg">Indulge in the epitome of service excellence at Liberation Suite, where our devoted team elevates hospitality to new heights. Each member is passionately committed to ensuring your stay is not merely satisfactory but genuinely exceptional. From the moment you step through our doors, our team's dedication shines through, creating an atmosphere where every guest feels not only welcomed but also valued. Liberation Suite's commitment to elevated hospitality is not just a promise; it's a personalized experience that leaves a lasting imprint, making your stay truly extraordinary.</p>
                 </div>
             </div>
-            <div class="row py-5 justify-content-evenly ">
+            <div class="row py-5 justify-content-center mb-5">
                 <div class="col-md-5 col-10 mt-5 mx-auto">
                     <h3 class="fs-2 fw-bolder">Experience <span class="span-color">Comfort</span> And <span class="span-color">Luxury</span></h3>
                     <p class="lh-lg">Embark on a journey of unparalleled indulgence at Liberation Suite, where supreme comfort and luxury converge in a symphony of opulence and sophistication. Each moment is a curated celebration, where guests are invited to immerse themselves in an atmosphere that transcends ordinary hospitality. Liberation Suite's commitment to excellence unfolds in the meticulous details of luxurious spaces, creating an ambiance that elevates the stay into an extraordinary experience. Whether it's the plush accommodations or the attentive service, every aspect is designed to provide an unforgettable retreat where guests can revel in the epitome of refined luxury.</p>
                 </div>
-                <div class="col-md-6 col-10 mx-auto">
+                <div class="col-md-6 col-10 mx-auto align-self-center">
                     <div class="img-holder overflow-hidden rounded-5">
                         <img src="{% static 'images/Liberation-Suite-supreme-room2.jpg' %}" class="img d-block mx-auto img-fluid" alt="liberation-suite-hotel-about">
                     </div>
@@ -72,7 +72,7 @@
     <!-- KPIs section starts here  -->
     <section class="s-four c1 py-5 text-light" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{% static 'images/stats.jpg' %}'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
         <div class="container py-5">
-            <div class="row justify-content-evenly gx-5">
+            <div class="row justify-content-center gx-5">
                 <div class="col-md-6 col-10 my-5">
                     <p class="fs-5 fw-bolder">What We Have Achieved</p>
                     <h2 class="mt-3 mb-3 fw-bolder text-light headline_part">Libration Suite Hotels</h2>
@@ -147,7 +147,7 @@
     <!-- KPIs section stops here  -->
 
     <!-- about page second section starts here  -->
-    <section class="about-two py-5">
+    <!-- <section class="about-two py-5">
         <div class="container">
             <div class="intro mb-5 text-center">
                 <h2 class="fw-bolder headline_part">Our <strong class="span-color">Management Team</strong></h2>
@@ -158,7 +158,7 @@
                 <div class="col-md-4 col-8 mx-auto p-4">
                     <div class="card">
                         <div class="img-holder rounded-0 shadow-0 w-100 d-block">
-                            <img src="{{ item.image.url }}" class="card-img-top" alt="liberation-suite-hotel-{{ item.slug }}">
+                            <img src="{{ item.image }}" class="card-img-top" alt="liberation-suite-hotel-{{ item.slug }}">
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -176,7 +176,7 @@
                 {% endfor %}
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- about page second section stops here  -->
  {% endblock content %}
  <!-- Body section stops here  -->
