@@ -1,0 +1,385 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/logo3.png' %}" type="image/x-icon">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mmenu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/perfect-scrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" id="colors">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">     -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HG3GF2M81K"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HG3GF2M81K');
+    </script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon-ligatures@2.5.0/fonts/remixicon.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" rel="stylesheet" type="text/css">
+
+
+    <style>
+
+        body{
+            overflow-x: hidden;
+        }
+        /* ======================== */
+        /* custon header and hero section styling  */
+        /* Home Page  */
+        /* ======================== */
+        .hc-info .socials li:hover{
+            background-color: var(--main-color);
+            border-radius: 20px;
+            padding: 1px;
+        }
+
+        .c-item{
+            height: 90vh !important;
+        }
+
+        .c-img{
+            height: 100% !important;
+            object-fit: cover !important;
+            filter: brightness(.4) !important;
+        }
+
+        .hero-caption{
+            margin-top: 7% !important;
+        }
+
+        .c1{
+            background-color: #840032;
+        }
+        .c2{
+            background-color: #efefef;
+        }
+        .c3{
+            background-color: #FFEBF2;
+        }
+        .c4{
+            background-color: #eeece5;
+        }
+        .c7{
+            background-color: #F50056;
+        }
+
+
+
+        /* scroll bar settings  */
+        ::-webkit-scrollbar{
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track{
+            background: #fdf4f9;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            background: #F50056;
+            border-radius: 5px;
+        }  
+
+        /* form inputs */
+        input:focus {
+            border-color: var(--span-color) !important;
+            outline: 0;
+            box-shadow: 0 0 0 0 !important;
+        }
+
+        textarea:focus {
+            border-color: var(--span-color) !important;
+            outline: 0;
+            box-shadow: 0 0 0 0 !important;
+        }
+
+
+        /* ======================== */
+        /* variables colors and global classes  */
+        /* ======================== */
+        :root {
+            --background-color: #fff ;
+            --main-color: #840032;
+            --second-color: #efefef;
+            --spice-color: #F50056;
+            --spice-background: #FFEBF2;
+            --border-radius: 20px;
+            --contrast-color: #fff;
+            --span-color: #F56;
+        }
+
+        p{
+            font-size: 80%;
+        }
+
+        .span-color{
+            color: #F50056 !important;
+        }
+
+        .custom-btn{
+            border: 1px solid #F50056;
+            border-radius: 0;
+            padding: 10px;
+            font-size: 1.5rem;
+            font-weight: bolder !important;
+            border-radius: 5px;
+            color: var(--spice-color) !important;
+        }
+
+        .custom-btn:hover{
+            background-color: var(--spice-color) !important;
+            cursor: pointer;
+            color: var(--contrast-color) !important;
+        }
+
+        .contrast-custom-btn{
+            border: 1px solid #F50056;
+            border-radius: 0;
+            font-weight: bolder !important;
+            font-size: 1.5rem;  
+            border-radius: 5px;
+            background-color: var(--spice-color) !important;
+            color: var(--contrast-color) !important;
+            padding: 10px;
+            transition: .3s ease-in-out;
+        }
+
+        .contrast-custom-btn:hover{
+            background-color: var(--main-color) !important;
+            color: var(--contrast-color) !important;
+            transition: .3s ease-in-out;
+        }
+
+        .custom-card:hover{
+            background-color: var(--spice-color) !important;
+            cursor: pointer;
+            color: var(--contrast-color) !important;
+            transition: .3s ease-in-out;
+            box-shadow: 2px 6px 6px rgba(255,255,255,0.5);
+        }
+
+        footer .socials li{
+            background-color: rgba(0,0,0,0.9);
+            border-radius: 20px;
+        }
+
+        footer .socials li:hover{
+            background-color: var(--main-color);
+            border-radius: 20px;
+            padding: 1px;
+        }
+
+        .f-links{
+            color: var(--contrast-color) !important;
+            text-decoration: none;
+        }
+
+        .f-links:hover{
+            color: var(--span-color) !important;
+            transition: .3s ease-in-out;
+            background-position: ;
+        }
+
+        /* ======================== */
+        /* custon header and hero section styling  */
+        /* About Page  */
+        /* ======================== */
+
+        .about-one{
+            text-align: justify;
+        }
+
+        .img-holder{
+            border-radius: 5%;
+            width: 90%;
+            overflow: hidden;
+        }
+
+        .img-holder:hover{
+            transition: .5s ease-out;
+            box-shadow: 2px 4px 6px rgba(0,0,0,0.5);   
+        }
+
+        .img-holder img{
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-holder img:hover{
+            transform-origin:center;
+            transform: scale(1.1);
+            transition: .5s ease-out;
+        }
+
+        /* ======================== */
+        /* custon header and hero section styling  */
+        /* contact Page  */
+        /* ======================== */
+        .contact-one input:hover{
+            border: 1px solid var(--span-color);
+        }
+
+        .contact-one textarea:hover{
+            border: 1px solid var(--span-color);
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div id="main_wrapper">
+        <header id="header_part" class="fixed fullwidth_block dashboard">
+            <div id="header" class="not-sticky">
+                <div class="container">
+                    <div class="utf_left_side">
+                        <div id="logo"> <a href="{% url 'dashboard:dashboard' %}"><img src="{% static 'images/logo.png' %}" alt=""></a> <a href="{% url 'hotel:index' %}" class="dashboard-logo"><img src="{% static 'images/logo.png' %}" alt=""></a> </div>
+                        <div class="mmenu-trigger">
+                            <button class="hamburger utfbutton_collapse" type="button">
+                                <span class="utf_inner_button_box">
+                                    <span class="utf_inner_section"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <nav id="navigation" class="style_one">
+                            <ul id="responsive">
+                                <li><a href="{% url 'dashboard:dashboard' %}"> <i class="bi bi-grid"></i> Dashboard</a></li>
+                            </ul>
+                        </nav>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="utf_right_side d-flex">
+                        <div class="header_widget">
+                            <div class="dashboard_header_button_item {% if noti %} has-noti {% endif %} js-item-menu">
+                                <i class="fas fa-bell"></i>
+                                <div class="dashboard_notifi_dropdown js-dropdown">
+                                    <div class="dashboard_notifi_title">
+                                        <p>You Have {{noti.count}} Notifications</p>
+                                    </div>
+                                    
+                                    {% for n in noti %}
+                                        <div class="dashboard_notifi_item">
+                                            <div class="bg-c1 red">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <div class="content">
+                                                
+                                                {% if n.type == "Booking Confirmed" %}
+                                                    <p>Your booking <b>(#{{n.booking.booking_id}})</b> has been placed successfully.</p>
+                                                {% endif %}
+                                                <span class="date">{{n.date|timesince}} ago</span>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                    
+                                    {% if noti %}
+                                        <div class="dashboard_notify_bottom text-center pad-tb-20">
+                                            <a href="{% url 'dashboard:notifications' %}">View All Notifications</a>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="utf_user_menu">
+                                <div class="utf_user_name"><span><img src="{{request.user.profile.image.url}}" alt="user-profile"></span>Hi, {{request.user.username|title}}!</div>
+                                <ul>
+                                    <li><a href="{% url 'dashboard:dashboard' %}">Dashboard</a></li>
+                                    <li><a href="{% url 'dashboard:dashboard' %}"> My Profile</a></li>
+                                    <li><a href="{% url 'dashboard:bookings' %}">Boking</a></li>
+                                    <li><a href="{% url 'dashboard:wallet' %}">Wallet</a></li>
+                                    <li><a href="{% url 'dashboard:bookmark' %}">Bookmarks</a></li>
+                                    <li><a href="{% url 'dashboard:notifications' %}">Notifications</a></li>
+                                    <li><a href="{% url 'userauths:sign-out' %}">Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="clearfix"></div>
+
+
+        <script>
+            {% for message in messages %}
+    
+                Swal.fire({
+                    icon: '{{message.tags}}',
+                    title: '{{message}}',
+                    text: '{{message.tags}}',
+                    timer: 1500
+                })
+            
+            {% endfor %}
+        </script>
+
+        
+        {% block content %}
+            
+        {% endblock content %}
+            
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'scripts/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'scripts/chosen.min.js' %}"></script>
+    <script src="{% static 'scripts/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'scripts/slick.min.js' %}"></script>
+    <script src="{% static 'scripts/rangeslider.min.js' %}"></script>
+    <script src="{% static 'scripts/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'scripts/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'scripts/mmenu.js' %}"></script>
+    <script src="{% static 'scripts/tooltips.min.js' %}"></script>
+    <script src="{% static 'scripts/color_switcher.js' %}"></script>
+    <script src="{% static 'scripts/jquery_custom.js' %}"></script>
+    <script src="{% static 'scripts/custom.js' %}"></script>
+    <script>
+        (function($) {
+            try {
+                var jscr1 = $('.js-scrollbar');
+                if (jscr1[0]) {
+                    const ps1 = new PerfectScrollbar('.js-scrollbar');
+
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        })(jQuery);
+    </script>
+    
+</body>
+
+</html>

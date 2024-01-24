@@ -1,0 +1,194 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- the hero section and slider starts here  -->
+    <section class="about-hero py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{% static 'images/bg_6.jpg' %}'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+        <div class="contianer py-5">
+            <div class="row py-5">
+                <div class="col-10 mx-auto text-light w-50 text-center">
+                    <h1 class="fw-bolder fs-1 text-light" style="font-weight: 900;">Terms and Conditions</h1>
+                    <p><a href="{% url 'hotel:index' %}" style="text-decoration: none;"><span class="span-color">Home</span></a> / Terms and Conditions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+<!-- the hero section and slider stops here  -->
+
+<div class="container">
+    <div class="intro text-center my-5">
+        <h2 class="fw-bolde headline_part">Liberation Suite Hotel <strong class="span-color">Terms and Conditions</strong></h2>
+        <p class="w-50 mx-auto"</p>
+    </div>
+    <div class="row justify-content-center py-5">
+        <div class="col-10">
+           
+
+            <ol class="list-group list-group-numbered rounded-5">
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Introduction</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">Welcome to Liberation Suite Hotel, where luxury meets comfort in an ambiance of unparalleled hospitality. Before booking a stay with us, we encourage you to review and understand our terms and conditions outlined below. By making a reservation, you agree to comply with these terms, ensuring a seamless and enjoyable experience for yourself and other guests. If you have any questions or require clarification on any aspect, feel free to contact us at <span class="span-color">liberationapartment@gmail.com</span>. Your stay with us is important, and we appreciate your cooperation in making it a memorable one.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Acceptance of Terms</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">By reserving a room at Liberation Suite Hotel, you agree to comply with and be bound by the terms and conditions set forth in this document.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Reservation Policy</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">All room reservations are subject to availability and until payment is made, a room remains available.</li>
+                            <li class="list-group-item border-0 ms-2">Liberation Suite Hotel reserves the right to refuse service to any guest for reasons including but not limited to:
+                               <ul>
+                                <li>- Non-compliance with hotel policies.</li>
+                                <li>- Disruptive behavior that may disturb other guests.</li>
+                                <li>- Intoxication or substance abuse.</li>
+                                <li>- Any illegal activities on hotel premises.</li>
+                                <li>- Failure to comply with health and safety regulations.</li>
+                                <li>- Non-payment of outstanding charges.</li>
+                                <li>- Violation of the hotel's no-smoking and no-pets policy.</li>
+                               </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Check-In and Check-Out</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">Check-in time is 8am of the check-in date (for online bookings). Early check-ins are subject to availability.</li>
+                            <li class="list-group-item border-0 ms-2">Check-out time is between 8pm and 11:59pm of the check-out date. Late check-outs may incur additional charges.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Payment Policy</div>
+                    <ol class="list-group list-group-numbered fs-4">
+                        <li class="list-group-item border-0 ms-2">Full payment is required at the time of booking.</li>
+                        <li class="list-group-item border-0 ms-2">Accepted payment methods include Flutterwave (for online payments), Cash payment and POS payments are to be made at the front desk of Liberation Suite Hotel</li>
+                        <li class="list-group-item border-0 ms-2">Additional charges will be settled at check-out.</li>
+                    </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Cancellation Policy</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">Cancellations made 72 hours or more before the check-in date qualify for a full refund.</li>
+                            <li class="list-group-item border-0 ms-2">Cancellations within 48 hours of the check-in date are subject to a cancellation fee</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">No Smoking and No Pets Policy</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">Smoking is strictly prohibited within the hotel premises, including rooms and common areas.</li>
+                            <li class="list-group-item border-0 ms-2">Pets are not allowed on the hotel premises.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Occupancy Limit</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">Each room has a specified occupancy limit. Guests must not exceed this limit.</li>
+                            <li class="list-group-item border-0 ms-2">Exceptions may be granted for children; please inquire at the front desk.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Damages</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">Guests are financially responsible for any damages to hotel property during their stay.</li>
+                            <li class="list-group-item border-0 ms-2">The hotel reserves the right to charge the credit card on file for any damages.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Safety and Security</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">Guests are encouraged to use safety deposit boxes for valuables.</li>
+                            <li class="list-group-item border-0 ms-2">Liberation Suite Hotel is not liable for lost or stolen items.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Right to Refuse Service</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">Liberation Suite Hotel reserves the right to refuse service to any guest for improper conduct or any other reason.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Changes to Terms</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">These terms are subject to change without notice.</li>
+                            <li class="list-group-item border-0 ms-2">Changes are effective upon posting on the hotel's official website or Social Media Handles.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Governing Law</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">This agreement is governed by the laws of Nigeria, with the hotel's physical location in Abuja serving as the designated jurisdiction.</li>
+                            <li class="list-group-item border-0 ms-2">The hotel reserves the right to charge the credit card on file for any damages.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Contact Information</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2">For inquiries regarding these terms, contact Liberation Suite Hotel at <span class="span-color">liberationapartment@gmail.com</span>.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+            </ol>
+
+            <div class="my-5 py-5">
+                <blockquote>By completing a room reservation, you acknowledge that you have read, understood, and accepted these terms and conditions. Booking a room implies agreement to adhere to the policies outlined above.</blockquote>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

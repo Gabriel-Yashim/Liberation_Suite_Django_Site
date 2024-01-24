@@ -1,0 +1,111 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- the hero section and slider starts here  -->
+    <section class="about-hero py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{% static 'images/bg_6.jpg' %}'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+        <div class="contianer py-5">
+            <div class="row py-5">
+                <div class="col-10 mx-auto text-light w-50 text-center">
+                    <h1 class="fw-bolder fs-1 text-light" style="font-weight: 900;">Privacy Policy</h1>
+                    <p><a href="{% url 'hotel:index' %}" style="text-decoration: none;"><span class="span-color">Home</span></a> / Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+<!-- the hero section and slider stops here  -->
+
+<div class="container">
+    <div class="intro text-center my-5">
+        <h2 class="fw-bolde headline_part">Liberation Suite Hotel <strong class="span-color">Privacy Policy</strong></h2>
+        <p class="w-50 mx-auto">At Liberation Suite Hotel, we are committed to safeguarding your privacy. This Privacy Policy outlines how we collect, use, disclose, and protect the personal information you provide to us. By using our services, you agree to the terms outlined in this policy.</p>
+    </div>
+    <div class="row justify-content-center py-5">
+        <div class="col-10">
+           
+
+            <ol class="list-group list-group-numbered rounded-5">
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Information We Collect</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2"><b>Personal Information: </b>When you make a reservation or use our services, we collect personal information such as your name, contact details, payment information, and any special requests or preferences.</li>
+                            <li class="list-group-item border-0 ms-2"><b>Usage Information: </b>We may collect information about how you interact with our website, including IP addresses, browser type, pages visited, and other analytics data.</li>
+                            <li class="list-group-item border-0 ms-2"><b>Communication Data: </b>If you contact us, we may retain records of your communication for customer service purposes.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">How We Use Your Information</div>
+                        <ol class="list-group list-group-numbered fs-4">
+                            <li class="list-group-item border-0 ms-2"><b>Reservation Processing: </b>We use your personal information to process and manage reservations, ensuring a seamless and personalized experience during your stay.</li>
+                            <li class="list-group-item border-0 ms-2"><b>Improving Our Services: </b>Your usage information helps us understand how our website and services are used, allowing us to enhance user experience and optimize our offerings.</li>
+                            <li class="list-group-item border-0 ms-2"><b>Communication: </b>We may use your contact details to communicate with you regarding your reservation, promotions, surveys, or updates about our services.</li>
+                            <li class="list-group-item border-0 ms-2"><b>Legal Compliance: </b>We may use and disclose your information as required by law or when necessary to protect our rights, property, or safety.</li>
+                        </ol>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Data Security</div>
+                        <p class="ms-2">
+                        We employ industry-standard security measures to protect your personal information. However, please note that no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee absolute security.
+                        </p>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Disclosure to Third Parties</div>
+                        <p class="ms-2">
+                        We do not sell, trade, or otherwise transfer your personal information to outside parties unless we provide you with advance notice. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, as long as those parties agree to keep this information confidential.
+                        </p>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Your Rights</div>
+                        <p class="ms-2">
+                        You have the right to access, correct, or delete your personal information. If you wish to exercise these rights or have any questions about our Privacy Policy, please contact us at <span class="span-color">liberationapartment@gmail.com</span>.
+                        </p>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start fs-3 py-5 px-3">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold span-color">Changes to This Privacy Policy</div>
+                        <p class="ms-2">
+                        We reserve the right to update or modify this Privacy Policy at any time. We will notify you of any changes by posting the new policy on this page.
+                        <br>
+                        By using our website or services, you consent to the terms outlined in this Privacy Policy.
+                        </p>
+                    </div>
+                    <span class="badge bg-primary rounded-pill"></span>
+                </li>
+            </ol>
+
+            <div class="my-5 py-5">
+                <blockquote>Last Updated: Jan. 8th, 2024 </blockquote>
+                <p>
+                    If you have any questions or concerns about our Privacy Policy, please contact us at <span class="span-color">liberationapartment@gmail.com</span>.
+                </p>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,462 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block page_seo %}
+    <meta name="description" content="Welcome to Liberation Suite Hotel, the epitome of luxury and comfort in the heart of Abuja. Experience a seamless stay with meticulously designed rooms and top-notch amenities. Your haven for extraordinary hospitality.">
+    <meta name='robots' content='index, follow'>
+    <meta name="keywords" content="Luxury Hotel Gwarinpa, Best Hotel in Abuja, Top-rated Hospitality Gwarinpa, Comfortable Stay Abuja, Premium Hotel Amenities, Exquisite Lodging Gwarinpa, Gwarinpa City Center Hotel, Liberation Suite Luxury Stay, Supreme Rooms Gwarinpa, Best Rates Liberation Suite">
+    <meta name='robots' content='index, follow'>
+{% endblock %}
+
+<title>{% block title %} Luxury Hotel in Gwarinpa, Abuja | Liberation Suite {% endblock %}</title>
+{% block content %}
+        <!-- Preloader Start -->
+        <!-- <div class="preloader">
+            <div class="utf-preloader">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div> -->
+        <!-- Preloader End -->
+        <!-- Banner -->
+        
+
+        <!-- the hero section and slider starts here  -->
+        <div class="hero position-relative">
+            <div class="carousel slide bg-dark" id="carouselExample" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+                    <li data-bs-target="#carouselExample" data-bs-slide-to="3"></li>
+                    <li data-bs-target="#carouselExample" data-bs-slide-to="4"></li>
+                    <li data-bs-target="#carouselExample" data-bs-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                    {% for item in herosection %}
+                    {%  if item.position == 1 %}
+                    <div class="carousel-item {{ item.mode }} c-item">
+                        <img src="{{ item.image.url }}" alt="liberation-suite-hotel-{{ item.slug }}" class="d-block c-img img-fluid w-100">
+                        <div class="carousel-caption w-50 mx-auto top-0 mt-4 d-md-block hero-caption">
+                            <h1 class="mt-5 fw-bolder text-light" style="font-size: 4rem;">{{ item.title }}</h1>
+                            <p>{{ item.text }}</p>
+                            {% for h in hotel %}
+                            <a href="{% url 'hotel:detail' h.slug %}#bkg" class="btn contrast-custom-btn rounded">Book Now <i class="ms-1 fa-solid fa-arrow-right-long ml-2"></i></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="carousel-item c-item">
+                        <img src="{{ item.image.url }}" alt="liberation-suite-hotel-{{ item.slug }}" class="d-block c-img img-fluid w-100">
+                        <div class="carousel-caption w-50 mx-auto top-0 mt-4 d-md-block hero-caption">
+                            <h1 class="mt-5 fw-bolder text-light" style="font-size: 4rem;">{{ item.title }}</h1>
+                            <p>{{ item.text }}</p>
+                            {% for h in hotel %}
+                            <a href="{% url 'hotel:detail' h.slug %}#bkg" class="btn contrast-custom-btn rounded">Book Now <i class="ms-1 fa-solid fa-arrow-right-long ml-2"></i></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Years Experience section starts here  -->
+        <section class="s-one py-5 mt-5">
+            <div class="container">
+                <div class="row justify-content-evenly">
+                    <div class="col-md-6">
+                        <div class="col-md-12 my-5">
+                            <h2 class="fw-bolder headline_part"><strong class="span-color">15+ Years</strong> of Experience</h2>
+                            <p>With over a decade of expertise, we pride ourselves on curating experiences that transcend the ordinary.</p>
+                        </div>
+                        <div class="details my-5">
+                            <div class="row justify-content-evenly">
+                                <div class="col-2 align-self-center">
+                                    <img src="{% static 'images/about-1.png' %}" class="d-block mx-auto img img-fluid" style="width: 70%;" alt="about-icon">
+                                </div>
+                                <div class="col-10">
+                                    <h3 class="fw-bolder fs-3">Recreating Home</h3>
+                                    <p class="m-0 fs-5">Discover comfort redefined in our thoughtfully designed spaces, where every detail reflects a warm and inviting atmosphere.
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row mt-5 justify-content-evenly">
+                                <div class="col-2 ">
+                                    <img src="{% static 'images/about-2.png' %}" class="d-block mx-auto img img-fluid" style="width: 70%;" alt="about-icon">
+                                </div>
+                                <div class="col-10">
+                                    <h3 class="fw-bolder fs-3">Hospitality At Its Pick</h3>
+                                    <p class="m-0 fs-5">Experience the pinnacle of service excellence with our dedicated team committed to making your stay truly exceptional.
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row my-5 justify-content-evenly">
+                                <div class="col-2">
+                                    <img src="{% static 'images/about-3.png' %}" class="d-block mx-auto img img-fluid" style="width: 70%;" alt="about-icon">
+                                </div>
+                                <div class="col-10">
+                                    <h3 class="fw-bolder fs-3">Experience Comfort And Luxury</h3>
+                                    <p class="m-0 fs-5">Immerse yourself in luxuriance and sophistication, where every moment is a celebration of comfort and refined luxury.</p>
+                                </div>
+                            </div>
+                            <a href="{% url 'hotel:about' %}" class="btn custom-btn">Read More <i class="fa-solid fa-arrow-right-long ml-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <img src="{% static 'images/about-01.jpg' %}" class="img-fluid" alt="liberation-suite-hotel">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Years Experience section stops here  -->
+
+        
+        <div class="clearfix"></div>
+
+
+        <!-- sample rooms section starts here  -->
+        <section class="s-three py-5">
+            <div class="container mb-5">
+                <div class="intro mb-5 text-center">
+                    <h2 class="fw-bolder headline_part">Our Exquisite <strong class="span-color">Rooms</strong></h2>
+                    <p class="w-50 mx-auto">Step into a world of refined elegance and unparalleled comfort. Our exquisite rooms are meticulously designed to elevate your stay, ensuring a truly luxurious and memorable experience.</p>
+                </div>
+                <div class="row justify-content-center">
+                    {% for item in room %}
+                    <div class="col-md-5 col-8 my-3 mx-3">
+                        <div class="card p-2 shadow-lg">
+                            <div class="carousel slide" id="carouselExample{{ item.carousel_number }}" data-bs-ride="carousel">
+                                <div class="carousel-inner" style="height: 300px;">
+                                    
+                                    <div class="carousel-item active" >
+                                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                        <img src="{{ item.image1.url }}" alt="liberation-suite-hotel-{{item.slug}}" class="d-block w-100 h-100 img-fluid rounded">
+                                    </div>
+                                    <div class="carousel-item" style="height: 45vh;">
+                                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                        <img src="{{ item.image2.url }}" alt="liberation-suite-hotel-{{item.slug}}" class="d-block w-100 h-100 img-fluid rounded">
+                                    </div>
+                                    <div class="carousel-item" style="height: 45vh;">
+                                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                        <img src="{{ item.image3.url }}" alt="liberation-suite-hotel-{{item.slug}}" class="d-block w-100 h-100 img-fluid rounded">
+                                    </div>
+                                    <div class="carousel-item" style="height: 45vh;">
+                                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                        <img src="{{ item.image4.url }}" alt="liberation-suite-hotel-{{item.slug}}" class="d-block w-100 h-100 img-fluid rounded">
+                                    </div>
+                                    <!-- <div class="carousel-item" style="height: 45vh;">
+                                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                        <img src="{{ item.image3.url }}" alt="Third Slide" class="d-block w-100 h-100 img-fluid rounded">
+                                    </div> -->
+                                </div>
+                                <a href="#carouselExample{{ item.carousel_number }}" class="carousel-control-prev" data-bs-target="#carouselExample{{ item.carousel_number }}" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a href="#carouselExample{{ item.carousel_number }}" class="carousel-control-next" data-bs-target="#carouselExample{{ item.carousel_number }}" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <div class="m-2 p-2 c4 text-dark" style="border-radius: 20px;">
+                                    <div class="row text-center fs-4">
+                                        <div class="col-4">
+                                            <i class="fa-solid fa-bed"></i>
+                                            <span>{{ item.number_of_beds }}</span>
+                                        </div>
+                                        <div class="col-4">
+                                            <i class="fa-solid fa-person"></i>
+                                            <span>{{ item.room_capacity }}</span>
+                                        </div>
+                                        <div class="col-4">
+                                            <i class="fa-solid fa-maximize"></i>
+                                            <span>{{ item.room_size }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-3 mb-3 justify-content-evenly">
+                                    <div class="col-7">
+                                        <h5 class="card-title fw-bolder my-3 fs-3 ms-4" style="font-size: 2rem !important;">{{ item.type }}</h5>
+                                    </div>
+                                    <div class="col-5">
+                                        <p class="fs-5 fw-bolder my-3"><span class="fs-3 span-color fw-bolder">₦ {{ item.price }}</span> Per day</p>
+                                    </div>                                    
+                                </div>
+                                <a href="{% url 'hotel:room_details' item.slug %}" class="text-decoration-none text-dark"><p class="card-text px-3" style="text-align: justify;">{{ item.description|slice:":150"|safe}}...</p></a>
+                                <div class="row mt-3 mb-3 justify-content-center">
+                                    <div class="col-5">
+                                        <a href="{% url 'hotel:room_details' slug=item.slug %}" class="btn contrast-custom-btn py-2" style="border-radius: 10px;">More Details</a>
+                                    </div>
+                                    <div class="col-5">
+                                        {% for h in hotel %}
+                                        <a href="{% url 'hotel:detail' h.slug %}#bkg" class="btn contrast-custom-btn py-2" style="border-radius: 10px; float: inline-end;"><i class="fa-regular fa-bookmark mr-4"></i> Book Now</a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- sample rooms section stops here  -->
+
+        <!-- Services offered starts here  -->
+    <section class="s-two c2 py-5">
+        <div class="container mt-5 mb-5">
+            <div class="intro text-center mb-5">
+                <h2 class="fw-bolde headline_part">Our Amazing <strong class="span-color">Facilities</strong></h2>
+                <p class="m-0 mx-auto w-50">At Liberation Suite, we are dedicated to providing a unique and unforgettable experience for our guests. Our range of services is designed to ensure comfort, convenience, and an unparalleled stay. Explore the exceptional services we offer:</p>
+            </div>
+            <div class="row text-dark justify-content-evenly">
+                {% for item in servicesection %}
+                <div class="col-md-3 col-8 my-3">
+                    <div class="card py-3 shadow-lg" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                        <i class="fa-solid {{ item.icon}} mt-4 span-color fs-1  text-center"></i>
+                        <div class="card-body px-0">
+                          <h5 class="card-title fw-bolder fs-3 mb-3 text-center">{{ item.title }}</h5>
+                          <a href="{% url 'hotel:services' %}#service" class="text-decoration-none text-dark"><p class="card-text pt-2" style="width: 90%; margin: 0 auto; text-align: justify;">{{ item.text|slice:":130" }}...</p></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Services offered stops here  -->
+
+        <!-- KPIs section starts here  -->
+        <section class="s-four c1 py-5 text-light" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{% static 'images/stats.jpg' %}'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+            <div class="container py-5">
+                <div class="row justify-content-evenly gx-5">
+                    <div class="col-md-6 col-10 my-5">
+                        <p class="fs-5 fw-bolder">What We Have Achieved</p>
+                        <h2 class="mt-3 mb-3 fw-bolder text-light headline_part" style="font-weight: 900;">Libration Suite</h2>
+                        <p>Reflecting our progress, Liberation Suite has grown to offer a range of inviting rooms, comfortable beds, a growing list of happy guests, and a variety of delicious meals.</p>
+                        {% for h in hotel %}
+                        <a href="{% url 'hotel:detail' h.slug %}#bkg" class="btn contrast-custom-btn">Book Now <i class="fa-solid fa-arrow-right-long ml-2"></i></a>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-6 col-10">
+                        <div class="row g-5 justify-content-center">
+                            <div class="col-4">
+                                <div class="card py-3 px-3 my-3 c1 mx-auto custom-card">
+                                    <div class="row">
+                                        <div class="col-3 text-center fs-3">
+                                            <i class="fa-solid fa-hotel mt-4"></i>
+                                        </div>
+                                        <div class="col-9">
+                                            <span class="fw-bolder fs-1 text-light"><span class="fw-bolder fs-1 text-light num" data-val="20">000</span>+</span>
+                                            <h5 class="text-light">Rooms</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card py-3 px-3 my-3 c1 text-light mx-auto custom-card">
+                                    <div class="row">
+                                        <div class="col-3 text-center fs-3">
+                                            <i class="fa-solid fa-bed mt-4"></i>
+                                        </div>
+                                        <div class="col-9">
+                                        <span class="fw-bolder fs-1 text-light"><span class="fw-bolder fs-1 text-light num" data-val="20">000</span>+</span>
+                                            <h5 class="text-light">Beds</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+    
+                        <div class="row g-5 justify-content-center">
+                            <div class="col-4">
+                                <div class="card py-3 px-3 my-3 c1 text-light mx-auto custom-card">
+                                    <div class="row">
+                                        <div class="col-3 text-center fs-3">
+                                            <i class="fa-solid fa-smile-beam mt-4"></i>
+                                        </div>
+                                        <div class="col-9">
+                                            <span class="fw-bolder fs-1 text-light"><span class="fw-bolder fs-1 text-light num" data-val="100">000</span>+</span>
+                                            <h5 class="text-light">Happy Clients</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card py-3 px-3 my-3 c1 text-light mx-auto custom-card">
+                                    <div class="row">
+                                        <div class="col-3 text-center fs-3">
+                                            <i class="fa-solid fa-list mt-4"></i>
+                                        </div>
+                                        <div class="col-9">
+                                            <span class="fw-bolder fs-1 text-light"><span class="fw-bolder fs-1 text-light num" data-val="10">000</span>+</span>
+                                            <h5 class="text-light">Menu Items</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- KPIs section stops here  -->
+
+        <!-- Gallery section starts here  -->
+        <section class="s-eight py-5 text-center">
+            <div class="container py-5">
+                <div class="intro pt-5">
+                    <h2 class="fw-bolder headline_part">Our <strong class="span-color">Gallery</strong></h2>
+                    <p class="w-50 mx-auto">Immerse yourself in the visual journey of Liberation Suite, where every snapshot captures the essence of our inviting spaces, exquisite amenities, and the joyous moments shared by our guests.</p>
+                </div>
+                <!-- <div class="card bg-transparent border-0"> -->
+                    <div class="row justify-content-evenly pb-5">
+                        <div class="col-md-3 col-10 g-3">
+                            <img src="{% static 'images/Liberation-Suite-Hotel-rv1.jpg' %}" class="img img-fluid" alt="liberation-suite-hotel">
+                        </div>
+                        <div class="col-md-3 col-10 g-3">
+                            <img src="{% static 'images/Liberation-Suite-Hotel-iiv1.jpg' %}" class="img img-fluid" alt="liberation-suite-hotel">
+                        </div>
+                        <div class="col-md-3 col-10 g-3">
+                            <img src="{% static 'images/Liberation-Suite-standard-room2.jpg' %}" class="img img-fluid" alt="liberation-suite-hotel">
+                        </div>
+                        <div class="col-md-3 col-10 g-3">
+                            <img src="{% static 'images/Liberation-Suite-standard-room3.jpg' %}" class="img img-fluid" alt="liberation-suite-hotel">
+                        </div>
+                        <div class="col-md-3 col-10 g-3">
+                            <img src="{% static 'images/Liberation-Suite-standard-room4.jpg' %}" class="img img-fluid" alt="liberation-suite-hotel">
+                        </div>
+                        <div class="col-md-3 col-10 g-3">
+                            <img src="{% static 'images/Liberation-Suite-superior-room5.jpg' %}" class="img img-fluid" alt="liberation-suite-hotel">
+                        </div>
+                        <div class="col-md-3 col-10 g-3">
+                            <img src="{% static 'images/Liberation-Suite-supreme-room2.jpg' %}" class="img img-fluid" alt="liberation-suite-hotel">
+                        </div>
+                        <div class="col-md-3 col-10 g-3">
+                            <img src="{% static 'images/Liberation-Suite-Hotel-iiv2.jpg' %}" class="img img-fluid" alt="liberation-suite-hotel">
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </section>
+        <!-- Gallery section stops here  -->
+
+        <section class="utf_testimonial_part fullwidth_block padding-top-75 padding-bottom-75">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h3 class="headline_part centered"> What Our <strong class="span-color">Customers</strong> Say<span class="margin-top-15">LListen to the stories of our delighted guests. Their experiences at Liberation Suite speak louder than words, making us proud to be their home away from home.</span> </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="fullwidth_carousel_container_block margin-top-20 py-3">
+                <div class="utf_testimonial_carousel testimonials">
+                    {% for a in all_reviews %}
+                    <div class="utf_carousel_review_part">
+                        <div class="utf_testimonial_box">
+                            <div class="testimonial">{{ a.review }}</div>
+                            <span class="date"><i class="fa fa-clock-o"></i> {{ a.date }}</span>
+                        </div>
+                        <div class="utf_testimonial_author"> <img src="{{ a.user.profile.image.url }}" alt="">
+                            <h4>{{ a.user.profile.full_name }}</h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- <div class="utf_carousel_review_part">
+                        <div class="utf_testimonial_box">
+                            <div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla. Nulla posuere sapien vitae lectus suscipit, et pulvinar nisi tincidunt. Aliquam
+                                erat volutpat. Curabitur convallis fringilla diam sed aliquam. Sed tempor iaculis massa faucibus feugiat. In fermentum facilisis massa, a consequat purus viverra.</div>
+                        </div>
+                        <div class="utf_testimonial_author"> <img src="{% static 'images/happy-client-02.jpg' %}" alt="">
+                            <h4>Adam Alloriam <span>Web Developer</span></h4>
+                        </div>
+                    </div> -->
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- about page second section starts here  -->
+        <section class="about-two py-5">
+            <div class="container">
+                <div class="intro mb-5 text-center">
+                    <h2 class="fw-bolder headline_part">Our <strong class="span-color">Management Team</strong></h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="row">
+                    {% for item in management %}
+                    <div class="col-md-4 col-8 mx-auto p-4">
+                        <div class="card">
+                            <div class="img-holder rounded-0 shadow-0 w-100 d-block">
+                                <img src="{{ item.image.url }}" class="card-img-top" alt="liberation-suite-hotel-about">
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <h5 class="card-title fw-bolder fs-2">{{ item.name }}</h5>
+                                        <p><em>{{ item.position }}</em></p>
+                                    </div>
+                                    <div class="col-3 text-center p-3">
+                                        <a href="{{ item.social_links }}"><i class="fa-solid fa-link fs-3 span-color"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- about page second section stops here  -->
+        
+        <section class="fullwidth_block padding-top-75 padding-bottom-75" data-background-color="#ffffff">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="headline_part centered margin-bottom-50"> Letest Tips & Blog<span>Discover & connect with top-rated local businesses</span></h3>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    {% for item in blog %}
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <a href="{% url 'hotel:blog_details' item.slug %}" class="blog_compact_part-container">
+                            <div class="blog_compact_part"> <img src="{{ item.image1.url }}" alt="">
+                                <div class="blog_compact_part_content">
+                                    <h3>{{ item.title }}</h3>
+                                    <ul class="blog_post_tag_part">
+                                        <li>{{ item.date }}</li>
+                                    </ul>
+                                    <p class="text-light">{{ item.details|safe|slice:":150" }}... </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                    <div class="col-md-12 centered_content"> <a href="{% url 'hotel:blogs' %}" class="button border margin-top-20 text-decoration-none">View More Blog</a> </div>
+                </div>
+            </div>
+        </section>
+
+        
+       
+
+{% endblock content %}
+    

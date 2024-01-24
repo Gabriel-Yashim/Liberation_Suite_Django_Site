@@ -1,0 +1,64 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block page_seo %}
+    <meta name="description" content="Explore our range of meticulously crafted rooms and premium amenities at Liberation Suite Hotel, Gwarinpa. From opulent Supreme Rooms to versatile Standard Suites, we offer a perfect blend of comfort and style.">
+    <meta name='robots' content='index, follow'>
+{% endblock %}
+
+<title>{% block title %} Premium Services at Liberation Suite Hotel, Gwarinpa {% endblock %}</title>
+<!-- the hero section and slider starts here  -->
+{% block content %} 
+    <section class="about-hero py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{% static 'images/Liberation-Suite-Hotel-kv1.jpg' %}'); background-repeat: no-repeat; background-position: bottom; background-size: cover; background-attachment: fixed;">
+        <div class="contianer py-5">
+            <div class="row py-5">
+                <div class="col-10 mx-auto text-light w-50 text-center py-5">
+                    <h1 class="fw-bolder headline_part text-light">Services</h1>
+                    <p><a href="{% url 'hotel:index' %}" style="text-decoration: none;"><span class="span-color">Home</span></a> / Services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+<!-- the hero section and slider stops here  -->
+
+ <!-- Body section starts here  -->
+    <!-- Services offered starts here  -->
+    <div id="service"></div>
+    <section class="s-two c2 py-5">
+        <div class="container mt-5 mb-5">
+            <div class="intro text-center mb-5">
+                <h2 class="fw-bolde headline_part">Our Amazing <strong class="span-color">Facilities</strong></h2>
+                <p class="m-0 mx-auto w-50">At Liberation Suite, we are dedicated to providing a unique and unforgettable experience for our guests. Our range of services is designed to ensure comfort, convenience, and an unparalleled stay. Explore the exceptional services we offer:</p>
+            </div>
+            <div class="row text-dark justify-content-center">
+                {% for item in servicesection %}
+                <div class="col-10 my-3">
+                    <div class="card py-3 shadow-lg" style="border-radius: 10px;">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4 my-auto">
+                                <img src="{{ item.image.url }}" class="img img-fluid" alt="liberation-suite-hotel{{ item.slug }}">
+                            </div>
+                            <div class="col-md-7 my-auto">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bolder fs-3"><i class="fa-solid {{ item.icon }} me-3 span-color"></i>{{ item.title }}</h5>
+                                    <p class="card-text pt-2 lh-lg">{{ item.text }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% for h in hotel %}
+            <blockquote class="my-5">
+                At Liberation Suite, we go beyond accommodation to create a haven where every detail is carefully curated for your comfort. Explore our services and let us redefine your expectations of hospitality. Your satisfaction is our commitment.
+
+                <a href="{% url 'hotel:detail' h.slug %}#bkg" class="span-color">Book</a> your stay at Liberation Suite today and discover a world of refined services and warm hospitality. Welcome to a place where every moment is designed to make your stay truly exceptional.
+            </blockquote>
+            {% endfor %}
+        </div>
+    </section>
+    <!-- Services offered stops here  -->
+ {% endblock content %}
+ <!-- Body section stops here  -->

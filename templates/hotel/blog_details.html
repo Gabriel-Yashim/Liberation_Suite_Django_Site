@@ -1,0 +1,37 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- the hero section and slider starts here  -->
+    <section class="about-hero py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{% static 'images/bg_29.jpg' %}'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+        <div class="contianer py-5">
+            <div class="row py-5">
+                <div class="col-10 mx-auto text-light w-50 text-center py-5">
+                    <h1 class="fw-bolder fs-1 text-light" style="font-weight: 900;">Blog Posts</h1>
+                    <p><a href="{% url 'hotel:index' %}" style="text-decoration: none;"><span class="span-color">Home</span></a> / <a href="{% url 'hotel:blogs' %}" style="text-decoration: none;"><span class="span-color">Blogs</span></a> / Blog Details</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- the hero section and slider stops here  -->
+
+    <!-- main blog details section starts here -->
+<div class="container py-5">
+    <div class="row py-5 justify-content-center">
+        <div class="col-8">
+            <img src="{{ blog.image1.url }}" class="img img-fluid" alt="{{ item.slug }}">
+            <div class="row justify-content-evenly">
+                <p class="col-6">Posted by: <strong class="span-color">{{ blog.user }}</strong></p>
+                <p class="col-6 text-center text-primary">{{ blog.date|date:"d M, Y" }}</p>
+            </div>
+        </div>
+        <div class="col-8 py-5">
+            <p style="text-align: justify !important;">{{ blog.details|safe }}</p>
+        </div>
+    </div>
+</div>
+
+    <!-- main blog details section stops here -->
+{% endblock content %}

@@ -1,0 +1,92 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- the hero section and slider starts here  -->
+    <section class="about-hero py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{% static 'images/Liberation-Suite-Hotel-iiv2.jpg' %}'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+        <div class="contianer py-5">
+            <div class="row py-5">
+                <div class="col-10 mx-auto text-light w-50 text-center py-5">
+                    <h1 class="fw-bolder fs-1 text-light" style="font-weight: 900;"></h1>
+                    <p><a href="{% url 'hotel:index' %}" style="text-decoration: none;"><span class="span-color">Home</span></a> / {{ room_details.type}} Details</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- the hero section and slider stops here  -->
+
+    <!-- main blog details section starts here -->
+<div class="container py-5">
+    <div class="intro mb-5 text-center">
+        <h2 class="fw-bolder headline_part pt-5" style="font-size: 5rem;"><strong class="span-color">{{ room_details.type}}</strong></h2>
+        <p class="w-50 mx-auto">Step into a world of refined elegance and unparalleled comfort. Our exquisite rooms are meticulously designed to elevate your stay, ensuring a truly luxurious and memorable experience.</p>
+    </div>
+    <div class="row py-5 justify-content-center">
+        <div class="col-8">
+            <div class="carousel slide" id="carouselExample{{ room_details.carousel_number}}" data-bs-ride="carousel">
+                <div class="carousel-inner ">
+                    
+                    <div class="carousel-item active">
+                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                        <img src="{{ room_details.image1.url }}" alt="liberation-suite-hotel-{{ room_details.slug }}" class="d-block w-100 h-100 img-fluid rounded">
+                    </div>
+                    <div class="carousel-item" >
+                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                        <img src="{{ room_details.image2.url }}" alt="liberation-suite-hotel-{{ room_details.slug }}" class="d-block w-100 h-100 img-fluid rounded">
+                    </div>
+                    <div class="carousel-item" >
+                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                        <img src="{{ room_details.image3.url }}" alt="liberation-suite-hotel-{{ room_details.slug }}" class="d-block w-100 h-100 img-fluid rounded">
+                    </div>
+                    <div class="carousel-item" >
+                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                        <img src="{{ room_details.image4.url }}" alt="liberation-suite-hotel-{{ room_details.slug }}" class="d-block w-100 h-100 img-fluid rounded">
+                    </div>
+                    <!-- <div class="carousel-item" >
+                        <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                        <img src="{{ room_details.image3.url }}" alt="Third Slide" class="d-block w-100 h-100 img-fluid rounded">
+                    </div> -->
+                </div>
+                <a href="#carouselExample{{ room_details..carousel_number}}" class="carousel-control-prev" data-bs-target="#carouselExample{{ room_details..carousel_number}}" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a href="#carouselExample{{ room_details.carousel_number}}" class="carousel-control-next" data-bs-target="#carouselExample{{ room_details..carousel_number}}" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </div>
+            
+        </div>
+        <div class="col-7 mt-5 py-5">
+            <p style="text-align: justify !important;">{{ room_details.description|safe }}</p>
+        </div>
+        <div class="col-8 py-5">
+            <p class=" my-3"><span class="span-color fw-bolder">₦ {{ room_details.price }}</span> Per Day</p>
+
+            {% for h in hotel %}
+            <a href="{% url 'hotel:detail' h.slug %}#bkg" class="btn contrast-custom-btn px-5" style="border-radius: 10px;"><i class="fa-regular fa-bookmark"></i> Book Now</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+    <!-- main blog details section stops here -->
+
+    <script>
+        var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExample'), {
+            interval: 7000,  // Set the interval (time between slides) in milliseconds
+        });
+        var myCarouse2 = new bootstrap.Carousel(document.getElementById('carouselExample1'), {
+            interval: 7000,  // Set the interval (time between slides) in milliseconds
+        });
+        var myCarouse3 = new bootstrap.Carousel(document.getElementById('carouselExample2'), {
+            interval: 7000,  // Set the interval (time between slides) in milliseconds
+        });
+        var myCarouse4 = new bootstrap.Carousel(document.getElementById('carouselExample3'), {
+            interval: 7000,  // Set the interval (time between slides) in milliseconds
+        });
+    </script>
+{% endblock content %}

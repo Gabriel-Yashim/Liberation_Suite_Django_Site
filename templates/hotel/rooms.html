@@ -1,0 +1,114 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- the hero section and slider starts here  -->
+    <section class="about-hero py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{% static 'images/Liberation-Suite-Hotel-rv3.jpg' %}'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+        <div class="contianer py-5">
+            <div class="row py-5">
+                <div class="col-10 mx-auto text-light w-50 text-center py-5">
+                    <h1 class="fw-bolder fs-1 text-light" style="font-weight: 900;">Rooms Page</h1>
+                    <p><a href="{% url 'hotel:index' %}" style="text-decoration: none;"><span class="span-color">Home</span></a> / Rooms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- the hero section and slider stops here  -->
+
+    <section class="fullwidth_block padding-top-75 padding-bottom-75" data-background-color="#ffffff">
+        <div class="container">
+            <div class="intro mb-5 text-center">
+                <h2 class="fw-bolder headline_part">Our Exquisite <strong class="span-color">Rooms</strong></h2>
+                <p class="w-50 mx-auto">Step into a world of refined elegance and unparalleled comfort. Our exquisite rooms are meticulously designed to elevate your stay, ensuring a truly luxurious and memorable experience.</p>
+            </div>
+            <div class="row justify-content-center">
+                {% for item in room %}
+                <div class="col-10 my-3 mx-3">
+                    <div class="card p-2 shadow-lg">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="carousel slide" id="carouselExample{{ item.carousel_number }}" data-bs-ride="carousel">
+                                    <div class="carousel-inner" style="height: max-content;">
+                                        
+                                        <div class="carousel-item active" >
+                                            <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                            <img src="{{ item.image1.url }}" alt="liberation-suite-hotel-{{item.slug}}" class="d-block w-100 h-100 img-fluid rounded">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                            <img src="{{ item.image2.url }}" alt="liberation-suite-hotel-{{item.slug}}" class="d-block w-100 h-100 img-fluid rounded">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                            <img src="{{ item.image3.url }}" alt="liberation-suite-hotel-{{item.slug}}" class="d-block w-100 h-100 img-fluid rounded">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                            <img src="{{ item.image4.url }}" alt="liberation-suite-hotel-{{item.slug}}" class="d-block w-100 h-100 img-fluid rounded">
+                                        </div>
+                                        <!-- <div class="carousel-item">
+                                            <span class="badge text-bg-danger m-1 position-absolute top-0 start-0" style="border-radius: 0px 15px; padding: 7.5px 15px; font-size: 1rem;">New</span>
+                                            <img src="{{ item.image3.url }}" alt="Third Slide" class="d-block w-100 h-100 img-fluid rounded">
+                                        </div> -->
+                                    </div>
+                                    <a href="#carouselExample{{ item.carousel_number }}" class="carousel-control-prev" data-bs-target="#carouselExample{{ item.carousel_number }}" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a href="#carouselExample{{ item.carousel_number }}" class="carousel-control-next" data-bs-target="#carouselExample{{ item.carousel_number }}" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+        
+                                    <div class="m-2 p-2 c4 text-dark" style="border-radius: 20px;">
+                                        <div class="row text-center fs-4">
+                                            <div class="col-4">
+                                                <i class="fa-solid fa-bed"></i>
+                                                <span>{{ item.number_of_beds }}</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <i class="fa-solid fa-person"></i>
+                                                <span>{{ item.room_capacity }}</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <i class="fa-solid fa-maximize"></i>
+                                                <span>{{ item.room_size }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <div class="row mt-3 mb-3 justify-content-evenly">
+                                        <div class="col-7">
+                                            <h5 class="card-title fw-bolder my-3 fs-3 ms-4" style="font-size: 2rem !important;">{{ item.type }}</h5>
+                                        </div>
+                                        <div class="col-5">
+                                            <p class="fs-5 fw-bolder my-3"><span class="fs-3 span-color fw-bolder">₦ {{ item.price }}</span> Per day</p>
+                                        </div>                                    
+                                    </div>
+                                    <a href="{% url 'hotel:room_details' item.slug %}" class="text-decoration-none text-dark"><p class="card-text px-3" style="text-align: justify;">{{ item.description|slice:":150"|safe}}...</p></a>
+                                    <div class="row mt-3 mb-3 justify-content-between">
+                                        <div class="col-5">
+                                            <a href="{% url 'hotel:room_details' slug=item.slug %}" class="btn contrast-custom-btn py-2" style="border-radius: 10px;">More Details</a>
+                                        </div>
+                                        <div class="col-5">
+                                            {% for h in hotel %}
+                                            <a href="{% url 'hotel:detail' h.slug %}#bkg" class="btn contrast-custom-btn py-2" style="border-radius: 10px; float: inline-end;"><i class="fa-regular fa-bookmark mr-4"></i> Book Now</a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div> 
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}

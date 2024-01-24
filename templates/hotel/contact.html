@@ -1,0 +1,133 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block page_seo %}
+    <meta name="description" content="Reach out to us at Liberation Suite Hotel in Gwarinpa, Abuja. We are dedicated to ensuring your inquiries are attended to promptly. Experience hospitality redefined at our luxury hotel.">
+    <meta name='robots' content='index, follow'>
+{% endblock %}
+
+<title>{% block title %} Contact Liberation Suite Hotel, Gwarinpa, Abuja {% endblock %}</title>
+{% block content %}
+
+<!-- the hero section and slider starts here  -->
+    <section class="about-hero py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('{% static 'images/Liberation-Suite-Hotel-rv2.jpg' %}'); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed;">
+        <div class="contianer py-5">
+            <div class="row py-5">
+                <div class="col-10 mx-auto text-light w-50 text-center py-5">
+                    <h1 class="fw-bolder fs-1 text-light" style="font-weight: 900;">Contact Us</h1>
+                    <p><a href="{% url 'hotel:index' %}" style="text-decoration: none;"><span class="span-color">Home</span></a> / Contact Us</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- the hero section and slider stops here  -->
+
+ <!-- Body section starts here  -->
+    <!-- contact page section one starts here  -->
+    <section class="contact-one py-5">
+        <div class="container">
+            <div class="intro text-center mt-5">
+                <h2 class="fw-bolder text-dark headline_part">Have a <strong class="span-color">Question?</strong></h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="row justify-content-center pb-5 ">
+                <div class="col-md-4 col-10 mt-4 m-3">
+                    <div class="row mt-3 justify-content-evenly">
+                        <div class="col-12 mx-max c2 py-4 my-2">
+                            <div class="row justify-content-center">
+                                <div class="col-2 text-enter pt-2">
+                                    <i class="fa-solid fa-location-dot text-center fs-1 span-color"></i>
+                                </div>
+                                <div class="col-9 ">
+                                    <h3 class="fw-bolder">Address</h3>
+                                    <p class="m-0">Plot 58 & 60, Along 24 Crescent, Off 2nd Avenue, Gwarinpa, FCT-Abuja</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mx-max c2 py-4 my-2">
+                            <div class="row justify-content-center">
+                                <div class="col-2 text-enter pt-2">
+                                    <i class="fa-solid fa-phone text-center fs-1 span-color"></i>
+                                </div>
+                                <div class="col-9 ">
+                                    <h3 class="fw-bolder">Phone</h3>
+                                    <p class="m-0">+234 806 303 9220, <br> +234 818 511 5604</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12 mx-max c2 py-4 my-2">
+                            <div class="row justify-content-center">
+                                <div class="col-2 text-enter pt-2">
+                                    <i class="fa-solid fa-envelope text-center fs-1 span-color"></i>
+                                </div>
+                                <div class="col-9 ">
+                                    <h3 class="fw-bolder">Email</h3>
+                                    <p class="m-0">liberationapartment@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mx-max c2 py-4 my-2">
+                            <div class="row justify-content-center">
+                                <div class="col-2 text-enter pt-2">
+                                    <i class="fa-solid fa-clock text-center fs-1 span-color"></i>
+                                </div>
+                                <div class="col-9 ">
+                                    <h3 class="fw-bolder">Opening Hours</h3>
+                                    <p class="m-0">24 Hours, 7 Days a Week</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-10 mt-5 c2 p-4 h-100">
+                    <form action="https://formspree.io/f/mdoqaggb" style="font-weight: bold;" method="POST">
+                        <div class="container">
+                            <div class="row p-2 my-2">
+                                <div class="form-group col-md-6">
+                                    <label for="name" class="d-block">Your Name</label>
+                                    <input type="text" placeholder="Full Name*" class="form-control p-2 rounded-0" id="name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email" class="d-block">Your Email</label>
+                                    <input type="email" placeholder="name@example.com*" class="form-control p-2 rounded-0" id="email" required>
+                                </div>   
+                            </div>
+                            <div class="row p-2 my-2">
+                                <div class="form-group col-md-6">
+                                    <label for="phone" class="d-block">Phone</label>
+                                    <input type="text" placeholder="Your Phone*" class="form-control p-2 rounded-0" id="phone" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="subject" class="d-block">Subject</label>
+                                    <input type="text" placeholder="Subject*" class="form-control p-2 rounded-0" id="subject" required>
+                                </div>   
+                            </div>
+                            <div class="form-group col-md-12 p-2 my-1">
+                                <label for="message" class="d-block">Your Message</label>
+                                <textarea class="form-control p-2 rounded-0" id="message" placeholder="Type Message" rows="4"></textarea>
+                            </div>
+                            <a href="#" class="btn contrast-custom-btn ms-2 px-4 rounded-0" type="submit">Submit</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact page section one stops here  -->
+
+    <!-- contact page section one starts here  -->
+    <section class="pb-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 col-10 mx-auto">
+    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1287.3964524812145!2d7.423941728343102!3d9.10837772190738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e755a2b931e65%3A0x49da0451b45671ba!2s58%2024%20Cres%2C%20Gwarinpa%2C%20900108%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1706072557547!5m2!1sen!2sng" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact page section one stops here  -->
+ {% endblock content %}
+ <!-- Body section stops here  -->
