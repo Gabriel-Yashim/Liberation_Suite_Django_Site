@@ -29,11 +29,11 @@
         <div class="container mt-5 mb-5">
             <div class="intro text-center mb-5">
                 <h2 class="fw-bolde headline_part">Our Amazing <strong class="span-color">Facilities</strong></h2>
-                <p class="m-0 mx-auto w-50">At Liberation Suite, we are dedicated to providing a unique and unforgettable experience for our guests. Our range of services is designed to ensure comfort, convenience, and an unparalleled stay. Explore the exceptional services we offer:</p>
+                <p class="m-0 mx-auto" style="width: 80%;">At Liberation Suite, we are dedicated to providing a unique and unforgettable experience for our guests. Our range of services is designed to ensure comfort, convenience, and an unparalleled stay. Explore the exceptional services we offer:</p>
             </div>
             <div class="row text-dark justify-content-center">
                 {% for item in servicesection %}
-                <div class="col-10 my-3">
+                <div class="col-md-10 col-12 my-3">
                     <div class="card py-3 shadow-lg" style="border-radius: 10px;">
                         <div class="row justify-content-center">
                             <div class="col-md-4 my-auto">
@@ -41,7 +41,7 @@
                             </div>
                             <div class="col-md-7 my-auto">
                                 <div class="card-body">
-                                    <h5 class="card-title fw-bolder fs-3"><i class="fa-solid {{ item.icon }} me-3 span-color"></i>{{ item.title }}</h5>
+                                    <h5 class="card-title fw-bolder fs-2 my-3"><i class="fa-solid {{ item.icon }} me-3 span-color"></i>{{ item.title }}</h5>
                                     <p class="card-text pt-2 lh-lg">{{ item.text }}</p>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                 {% endfor %}
             </div>
             {% for h in hotel %}
-            <blockquote class="my-5">
+            <blockquote class="my-5 text-justify">
                 At Liberation Suite, we go beyond accommodation to create a haven where every detail is carefully curated for your comfort. Explore our services and let us redefine your expectations of hospitality. Your satisfaction is our commitment.
 
                 <a href="{% url 'hotel:detail' h.slug %}#bkg" class="span-color">Book</a> your stay at Liberation Suite today and discover a world of refined services and warm hospitality. Welcome to a place where every moment is designed to make your stay truly exceptional.
